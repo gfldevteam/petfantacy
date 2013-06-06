@@ -7,6 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0D61001757A8E50091FB29 /* BattleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D60FE1757A8E50091FB29 /* BattleScene.cpp */; };
+		3B0D61061757A96F0091FB29 /* Pet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D61041757A96F0091FB29 /* Pet.cpp */; };
+		3B0D610A1757A9F20091FB29 /* Unit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D61081757A9F20091FB29 /* Unit.cpp */; };
+		3B0D610D1757AA350091FB29 /* Demon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D610B1757AA350091FB29 /* Demon.cpp */; };
+		3B0D61101757AAA90091FB29 /* Troop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D610E1757AAA90091FB29 /* Troop.cpp */; };
+		3B0D61131757AACF0091FB29 /* Background.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D61111757AACF0091FB29 /* Background.cpp */; };
+		3B0D61161757AAFC0091FB29 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D61141757AAFC0091FB29 /* Utils.cpp */; };
+		3B0D61191757AB200091FB29 /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D61171757AB1F0091FB29 /* Enemy.cpp */; };
+		3B0D612F1757AC3C0091FB29 /* pet_types.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B0D611B1757AC3C0091FB29 /* pet_types.plist */; };
+		3B0D61301757AC3C0091FB29 /* b0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0D611F1757AC3C0091FB29 /* b0.png */; };
+		3B0D61311757AC3C0091FB29 /* b1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0D61201757AC3C0091FB29 /* b1.png */; };
+		3B0D61321757AC3C0091FB29 /* b2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0D61211757AC3C0091FB29 /* b2.png */; };
+		3B0D61331757AC3C0091FB29 /* b3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0D61221757AC3C0091FB29 /* b3.png */; };
+		3B0D61341757AC3C0091FB29 /* demon0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0D61231757AC3C0091FB29 /* demon0.png */; };
+		3B0D61351757AC3C0091FB29 /* demon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0D61241757AC3C0091FB29 /* demon1.png */; };
+		3B0D61361757AC3C0091FB29 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0D61251757AC3C0091FB29 /* fire.png */; };
+		3B0D61371757AC3C0091FB29 /* pet0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0D61261757AC3C0091FB29 /* pet0.png */; };
+		3B0D61381757AC3C0091FB29 /* pet1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0D61271757AC3C0091FB29 /* pet1.png */; };
+		3B0D61391757AC3C0091FB29 /* pet2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0D61281757AC3C0091FB29 /* pet2.png */; };
+		3B0D613A1757AC3C0091FB29 /* pet3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0D61291757AC3C0091FB29 /* pet3.png */; };
+		3B0D613B1757AC3C0091FB29 /* r_background_start.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B0D612A1757AC3C0091FB29 /* r_background_start.jpg */; };
+		3B0D613C1757AC3C0091FB29 /* x0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0D612B1757AC3C0091FB29 /* x0.png */; };
+		3B0D613D1757AC3C0091FB29 /* x1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0D612C1757AC3C0091FB29 /* x1.png */; };
+		3B0D613E1757AC3C0091FB29 /* pet3_l1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B0D612D1757AC3C0091FB29 /* pet3_l1.plist */; };
+		3B0D613F1757AC3C0091FB29 /* pet3_l1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0D612E1757AC3C0091FB29 /* pet3_l1.png */; };
+		3B0D61421757ADA00091FB29 /* Spell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D61401757ADA00091FB29 /* Spell.cpp */; };
+		3B0D61451757B16B0091FB29 /* SpellEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D61431757B16A0091FB29 /* SpellEffect.cpp */; };
 		3B6538191753BD96007D01EA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6538181753BD96007D01EA /* QuartzCore.framework */; };
 		3B65381B1753BD96007D01EA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B65381A1753BD96007D01EA /* OpenGLES.framework */; };
 		3B65381D1753BD96007D01EA /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B65381C1753BD96007D01EA /* OpenAL.framework */; };
@@ -201,10 +228,48 @@
 		3B653AAA1753BD9A007D01EA /* CCTableViewCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B653AA91753BD9A007D01EA /* CCTableViewCell.cpp */; };
 		3B653AAE1753BD9A007D01EA /* HttpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B653AAD1753BD9A007D01EA /* HttpClient.cpp */; };
 		3B653AB71753BD9A007D01EA /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B653AB61753BD9A007D01EA /* AppDelegate.cpp */; };
-		3B653ABA1753BD9A007D01EA /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B653AB91753BD9A007D01EA /* HelloWorldScene.cpp */; };
+		3B653ABA1753BD9A007D01EA /* PetFantacy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B653AB91753BD9A007D01EA /* PetFantacy.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B0D60FE1757A8E50091FB29 /* BattleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BattleScene.cpp; path = Classes/BattleScene.cpp; sourceTree = "<group>"; };
+		3B0D60FF1757A8E50091FB29 /* BattleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BattleScene.h; path = Classes/BattleScene.h; sourceTree = "<group>"; };
+		3B0D61041757A96F0091FB29 /* Pet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Pet.cpp; path = Classes/Pet.cpp; sourceTree = "<group>"; };
+		3B0D61051757A96F0091FB29 /* Pet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pet.h; path = Classes/Pet.h; sourceTree = "<group>"; };
+		3B0D61071757A9D90091FB29 /* reslist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = reslist.h; path = Classes/reslist.h; sourceTree = "<group>"; };
+		3B0D61081757A9F20091FB29 /* Unit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Unit.cpp; path = Classes/Unit.cpp; sourceTree = "<group>"; };
+		3B0D61091757A9F20091FB29 /* Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Unit.h; path = Classes/Unit.h; sourceTree = "<group>"; };
+		3B0D610B1757AA350091FB29 /* Demon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Demon.cpp; path = Classes/Demon.cpp; sourceTree = "<group>"; };
+		3B0D610C1757AA350091FB29 /* Demon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Demon.h; path = Classes/Demon.h; sourceTree = "<group>"; };
+		3B0D610E1757AAA90091FB29 /* Troop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Troop.cpp; path = Classes/Troop.cpp; sourceTree = "<group>"; };
+		3B0D610F1757AAA90091FB29 /* Troop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Troop.h; path = Classes/Troop.h; sourceTree = "<group>"; };
+		3B0D61111757AACF0091FB29 /* Background.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Background.cpp; path = Classes/Background.cpp; sourceTree = "<group>"; };
+		3B0D61121757AACF0091FB29 /* Background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Background.h; path = Classes/Background.h; sourceTree = "<group>"; };
+		3B0D61141757AAFC0091FB29 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = Classes/Utils.cpp; sourceTree = "<group>"; };
+		3B0D61151757AAFC0091FB29 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Classes/Utils.h; sourceTree = "<group>"; };
+		3B0D61171757AB1F0091FB29 /* Enemy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Enemy.cpp; path = Classes/Enemy.cpp; sourceTree = "<group>"; };
+		3B0D61181757AB1F0091FB29 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Enemy.h; path = Classes/Enemy.h; sourceTree = "<group>"; };
+		3B0D611B1757AC3C0091FB29 /* pet_types.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pet_types.plist; sourceTree = "<group>"; };
+		3B0D611F1757AC3C0091FB29 /* b0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b0.png; sourceTree = "<group>"; };
+		3B0D61201757AC3C0091FB29 /* b1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b1.png; sourceTree = "<group>"; };
+		3B0D61211757AC3C0091FB29 /* b2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b2.png; sourceTree = "<group>"; };
+		3B0D61221757AC3C0091FB29 /* b3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b3.png; sourceTree = "<group>"; };
+		3B0D61231757AC3C0091FB29 /* demon0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demon0.png; sourceTree = "<group>"; };
+		3B0D61241757AC3C0091FB29 /* demon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demon1.png; sourceTree = "<group>"; };
+		3B0D61251757AC3C0091FB29 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
+		3B0D61261757AC3C0091FB29 /* pet0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pet0.png; sourceTree = "<group>"; };
+		3B0D61271757AC3C0091FB29 /* pet1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pet1.png; sourceTree = "<group>"; };
+		3B0D61281757AC3C0091FB29 /* pet2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pet2.png; sourceTree = "<group>"; };
+		3B0D61291757AC3C0091FB29 /* pet3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pet3.png; sourceTree = "<group>"; };
+		3B0D612A1757AC3C0091FB29 /* r_background_start.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = r_background_start.jpg; sourceTree = "<group>"; };
+		3B0D612B1757AC3C0091FB29 /* x0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x0.png; sourceTree = "<group>"; };
+		3B0D612C1757AC3C0091FB29 /* x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x1.png; sourceTree = "<group>"; };
+		3B0D612D1757AC3C0091FB29 /* pet3_l1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = pet3_l1.plist; path = Resources/pet3_l1.plist; sourceTree = "<group>"; };
+		3B0D612E1757AC3C0091FB29 /* pet3_l1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pet3_l1.png; path = Resources/pet3_l1.png; sourceTree = "<group>"; };
+		3B0D61401757ADA00091FB29 /* Spell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Spell.cpp; path = Classes/Spell.cpp; sourceTree = "<group>"; };
+		3B0D61411757ADA00091FB29 /* Spell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Spell.h; path = Classes/Spell.h; sourceTree = "<group>"; };
+		3B0D61431757B16A0091FB29 /* SpellEffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpellEffect.cpp; path = Classes/SpellEffect.cpp; sourceTree = "<group>"; };
+		3B0D61441757B16A0091FB29 /* SpellEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellEffect.h; path = Classes/SpellEffect.h; sourceTree = "<group>"; };
 		3B6538151753BD96007D01EA /* PetFantacy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetFantacy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B6538181753BD96007D01EA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3B65381A1753BD96007D01EA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -632,8 +697,8 @@
 		3B653AB31753BD9A007D01EA /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		3B653AB51753BD9A007D01EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		3B653AB61753BD9A007D01EA /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
-		3B653AB81753BD9A007D01EA /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
-		3B653AB91753BD9A007D01EA /* HelloWorldScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldScene.cpp; path = Classes/HelloWorldScene.cpp; sourceTree = "<group>"; };
+		3B653AB81753BD9A007D01EA /* PetFantacy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PetFantacy.h; path = Classes/PetFantacy.h; sourceTree = "<group>"; };
+		3B653AB91753BD9A007D01EA /* PetFantacy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PetFantacy.cpp; path = Classes/PetFantacy.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -656,6 +721,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B0D611A1757AC3C0091FB29 /* configs */ = {
+			isa = PBXGroup;
+			children = (
+				3B0D611B1757AC3C0091FB29 /* pet_types.plist */,
+			);
+			name = configs;
+			path = Resources/configs;
+			sourceTree = "<group>";
+		};
+		3B0D611C1757AC3C0091FB29 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				3B0D611D1757AC3C0091FB29 /* animations */,
+				3B0D611E1757AC3C0091FB29 /* b */,
+				3B0D61231757AC3C0091FB29 /* demon0.png */,
+				3B0D61241757AC3C0091FB29 /* demon1.png */,
+				3B0D61251757AC3C0091FB29 /* fire.png */,
+				3B0D61261757AC3C0091FB29 /* pet0.png */,
+				3B0D61271757AC3C0091FB29 /* pet1.png */,
+				3B0D61281757AC3C0091FB29 /* pet2.png */,
+				3B0D61291757AC3C0091FB29 /* pet3.png */,
+				3B0D612A1757AC3C0091FB29 /* r_background_start.jpg */,
+				3B0D612B1757AC3C0091FB29 /* x0.png */,
+				3B0D612C1757AC3C0091FB29 /* x1.png */,
+			);
+			name = images;
+			path = Resources/images;
+			sourceTree = "<group>";
+		};
+		3B0D611D1757AC3C0091FB29 /* animations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = animations;
+			sourceTree = "<group>";
+		};
+		3B0D611E1757AC3C0091FB29 /* b */ = {
+			isa = PBXGroup;
+			children = (
+				3B0D611F1757AC3C0091FB29 /* b0.png */,
+				3B0D61201757AC3C0091FB29 /* b1.png */,
+				3B0D61211757AC3C0091FB29 /* b2.png */,
+				3B0D61221757AC3C0091FB29 /* b3.png */,
+			);
+			path = b;
+			sourceTree = "<group>";
+		};
 		3B65380C1753BD96007D01EA = {
 			isa = PBXGroup;
 			children = (
@@ -703,6 +815,10 @@
 		3B6538291753BD96007D01EA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3B0D611A1757AC3C0091FB29 /* configs */,
+				3B0D611C1757AC3C0091FB29 /* images */,
+				3B0D612D1757AC3C0091FB29 /* pet3_l1.plist */,
+				3B0D612E1757AC3C0091FB29 /* pet3_l1.png */,
 				3B65382A1753BD96007D01EA /* CloseNormal.png */,
 				3B65382C1753BD96007D01EA /* CloseSelected.png */,
 				3B65382E1753BD96007D01EA /* Default.png */,
@@ -1515,12 +1631,42 @@
 		3B653AB41753BD9A007D01EA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3BFD9692175CF7A400256AE8 /* SpellEffects */,
 				3B653AB51753BD9A007D01EA /* AppDelegate.h */,
 				3B653AB61753BD9A007D01EA /* AppDelegate.cpp */,
-				3B653AB81753BD9A007D01EA /* HelloWorldScene.h */,
-				3B653AB91753BD9A007D01EA /* HelloWorldScene.cpp */,
+				3B653AB81753BD9A007D01EA /* PetFantacy.h */,
+				3B653AB91753BD9A007D01EA /* PetFantacy.cpp */,
+				3B0D60FE1757A8E50091FB29 /* BattleScene.cpp */,
+				3B0D60FF1757A8E50091FB29 /* BattleScene.h */,
+				3B0D61041757A96F0091FB29 /* Pet.cpp */,
+				3B0D61051757A96F0091FB29 /* Pet.h */,
+				3B0D61071757A9D90091FB29 /* reslist.h */,
+				3B0D61081757A9F20091FB29 /* Unit.cpp */,
+				3B0D61091757A9F20091FB29 /* Unit.h */,
+				3B0D610B1757AA350091FB29 /* Demon.cpp */,
+				3B0D610C1757AA350091FB29 /* Demon.h */,
+				3B0D610E1757AAA90091FB29 /* Troop.cpp */,
+				3B0D610F1757AAA90091FB29 /* Troop.h */,
+				3B0D61111757AACF0091FB29 /* Background.cpp */,
+				3B0D61121757AACF0091FB29 /* Background.h */,
+				3B0D61141757AAFC0091FB29 /* Utils.cpp */,
+				3B0D61151757AAFC0091FB29 /* Utils.h */,
+				3B0D61171757AB1F0091FB29 /* Enemy.cpp */,
+				3B0D61181757AB1F0091FB29 /* Enemy.h */,
+				3B0D61401757ADA00091FB29 /* Spell.cpp */,
+				3B0D61411757ADA00091FB29 /* Spell.h */,
+				3B0D61431757B16A0091FB29 /* SpellEffect.cpp */,
+				3B0D61441757B16A0091FB29 /* SpellEffect.h */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		3BFD9692175CF7A400256AE8 /* SpellEffects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SpellEffects;
+			path = Classes/SpellEffects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1585,6 +1731,23 @@
 				3B65383D1753BD97007D01EA /* Icon@2x.png in Resources */,
 				3B65383F1753BD97007D01EA /* iTunesArtwork in Resources */,
 				3B6538D11753BD98007D01EA /* ChangeLog in Resources */,
+				3B0D612F1757AC3C0091FB29 /* pet_types.plist in Resources */,
+				3B0D61301757AC3C0091FB29 /* b0.png in Resources */,
+				3B0D61311757AC3C0091FB29 /* b1.png in Resources */,
+				3B0D61321757AC3C0091FB29 /* b2.png in Resources */,
+				3B0D61331757AC3C0091FB29 /* b3.png in Resources */,
+				3B0D61341757AC3C0091FB29 /* demon0.png in Resources */,
+				3B0D61351757AC3C0091FB29 /* demon1.png in Resources */,
+				3B0D61361757AC3C0091FB29 /* fire.png in Resources */,
+				3B0D61371757AC3C0091FB29 /* pet0.png in Resources */,
+				3B0D61381757AC3C0091FB29 /* pet1.png in Resources */,
+				3B0D61391757AC3C0091FB29 /* pet2.png in Resources */,
+				3B0D613A1757AC3C0091FB29 /* pet3.png in Resources */,
+				3B0D613B1757AC3C0091FB29 /* r_background_start.jpg in Resources */,
+				3B0D613C1757AC3C0091FB29 /* x0.png in Resources */,
+				3B0D613D1757AC3C0091FB29 /* x1.png in Resources */,
+				3B0D613E1757AC3C0091FB29 /* pet3_l1.plist in Resources */,
+				3B0D613F1757AC3C0091FB29 /* pet3_l1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1768,7 +1931,17 @@
 				3B653AAA1753BD9A007D01EA /* CCTableViewCell.cpp in Sources */,
 				3B653AAE1753BD9A007D01EA /* HttpClient.cpp in Sources */,
 				3B653AB71753BD9A007D01EA /* AppDelegate.cpp in Sources */,
-				3B653ABA1753BD9A007D01EA /* HelloWorldScene.cpp in Sources */,
+				3B653ABA1753BD9A007D01EA /* PetFantacy.cpp in Sources */,
+				3B0D61001757A8E50091FB29 /* BattleScene.cpp in Sources */,
+				3B0D61061757A96F0091FB29 /* Pet.cpp in Sources */,
+				3B0D610A1757A9F20091FB29 /* Unit.cpp in Sources */,
+				3B0D610D1757AA350091FB29 /* Demon.cpp in Sources */,
+				3B0D61101757AAA90091FB29 /* Troop.cpp in Sources */,
+				3B0D61131757AACF0091FB29 /* Background.cpp in Sources */,
+				3B0D61161757AAFC0091FB29 /* Utils.cpp in Sources */,
+				3B0D61191757AB200091FB29 /* Enemy.cpp in Sources */,
+				3B0D61421757ADA00091FB29 /* Spell.cpp in Sources */,
+				3B0D61451757B16B0091FB29 /* SpellEffect.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1900,6 +2073,7 @@
 				3B653ABF1753BD9A007D01EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
