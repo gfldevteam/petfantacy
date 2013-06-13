@@ -54,6 +54,7 @@ Pet* Pet::createFakePet() {
 }
 
 void Pet::cast() {
+    sprite->stopAllActions();
     if (castAnim != NULL) {
         sprite->runAction(castAnim);
         return;

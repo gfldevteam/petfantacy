@@ -10,6 +10,7 @@
 #define __PetFantacy__SpellEffect__
 
 #include <iostream>
+
 #include "cocos2d.h"
 
 USING_NS_CC;
@@ -29,24 +30,40 @@ public:
      * @param int pet type
      * @param int pet level
      * @param CCPoint origin, position of caster
-     * @param CCSprite target
+     * @param CCPoint target position
      */
-    SpellEffect(int, int, CCPoint, CCSprite*);
+    SpellEffect(int, int, CCPoint, CCPoint, CCSprite*);
+    
+    static SpellEffect* create(int, int, CCPoint, CCPoint);
 
     void play();
 
     void playHit();
     
+    void setTarget(CCPoint t) {
+        target = t;
+    }
+    
 private:
+    
+    int type;
+    
+    int level;
     
     CCPoint origin;
     
-    CCSprite* target;
+    CCPoint target;
     
     CCAction* effect;
     
     CCAction* hitEffect;
     
+    CCSprite* sprite;
+    
+    float duration;
+    
 };
+
+#define CREATE_SU(type) new SpellEffect##type();
 
 #endif /* defined(__PetFantacy__SpellEffect__) */

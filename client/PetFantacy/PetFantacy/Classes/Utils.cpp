@@ -35,7 +35,7 @@ CCArray* Utils::getPetTypes() {
     return CCArray::createWithContentsOfFileThreadSafe("pet_types.plist");
 }
 
-CCAction* Utils::createAnimation(const char *animName) {
+CCAction* Utils::createAnimation(const char *animName, int times) {
     //CCSpriteFrameCache* cache = CCSpriteFrameCache::addSpriteFramesWithFile()
     CCSpriteFrameCache* cache = CCSpriteFrameCache::sharedSpriteFrameCache();
     const char* fileName = CCString::createWithFormat("%s_0.png", animName)->getCString();
@@ -53,7 +53,11 @@ CCAction* Utils::createAnimation(const char *animName) {
             fileName = CCString::createWithFormat("%s_%d.png", animName, i)->getCString();
             frame = cache->spriteFrameByName(fileName);
         } while (frame != NULL);
-        return CCRepeatForever::create(CCAnimate::create(anim));
+        if (times == 0) {
+            return CCRepeatForever::create(CCAnimate::create(anim));
+        } else {
+            return CCRepeat::create(CCAnimate::create(anim), times);
+        }
     }
     return NULL;
 }

@@ -43,12 +43,10 @@ Enemy::~Enemy() {
 }
 
 CCArray* Enemy::check() {
-    CCArray* rd = CCArray::create();
-    
     if (demonsInAction->count() == 0) {
         sendNextWave();
     }
-    return rd;
+    return demonsInAction;
 }
 
 void Enemy::sendNextWave() {
@@ -65,6 +63,7 @@ void Enemy::sendNextWave() {
         int c = i % 7;
         int r = 3 - i / 7;
         demon->setPosition(ccp(Unit::GRID_SIZE * c + Unit::GRID_SIZE/2, Unit::GRID_SIZE * r + Unit::GRID_SIZE/2));
+        demonsInAction->addObject(demon);
         addChild(demon);
     }
     

@@ -55,16 +55,25 @@ void BattleScene::tick() {
     if (pets->count() > 0) {
         int c = pets->count(), i = 0;
         for (; i < c; i++) {
-            spells->addObject(new Spell(NULL));
+            Spell* spell = new Spell(NULL);
+            spells->addObject(spell);
+            addChild(spell->getSprite());
         }
     }
+    
+    CCArray* demons = enemy->check();
     
     int i = 0, c = spells->count();
     for (; i < c; i++) {
         Spell* spell = (Spell*)spells->objectAtIndex(i);
+
         if (spell->getTicks() > 0) {
-            spell->attack();
+            spell->attack(demons);
+        } else {
+            spell->release();
+            spells->removeObjectAtIndex(i);
+            i--;
+            c--;
         }
     }
-    CCArray* demons = enemy->check();
 }
