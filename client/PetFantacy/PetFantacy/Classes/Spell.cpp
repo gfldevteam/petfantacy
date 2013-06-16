@@ -19,8 +19,8 @@ Spell::Spell(Pet* pet) {
     sprite->setAnchorPoint(ccp(0, 0));
     sprite->retain();
     casting = false;
-    spellEffect = new SpellEffect(3, 1, ccp(300, 500), ccp(20 + CCRANDOM_0_1() * 280, 300 + 180 * CCRANDOM_0_1()), sprite);
     duration = 0.5;
+    spellEffect = SpellEffect::create(3, 1, duration, sprite);
     aoeType = 0;
 }
 
@@ -30,21 +30,36 @@ Spell::Spell(Pet* pet) {
  */
 void Spell::attack(CCArray* demons) {
     if (shots >= 0 && !casting) {
-        if (demons->count() > 0) {
-            CCPoint target = ((Demon*)demons->randomObject())->getPosition();
-            target.x+=10;
-            target.y+=230;
-            spellEffect->setTarget(target);
-        }
+        selectTargets(demons);
         
         spellEffect->play();
+        /*
+         CCSequence::create的参数中最后一个传NULL，否则会出现莫名错误
+         **/
         sprite->runAction(CCSequence::create(CCDelayTime::create(duration),
-                                             CCCallFunc::create(this, callfunc_selector(Spell::stopCasting))));
+                                             CCCallFunc::create(spellEffect, callfunc_selector(SpellEffect::playHit)),
+                                             CCDelayTime::create(0.2),
+                                             CCCallFunc::create(this, callfunc_selector(Spell::stopCasting)), NULL));
         casting = true;
         //todo: 计算伤害，并减少目标血量
     } else {
         return;
     }
     shots--;
-    
+}
+
+void Spell::selectTargets(CCArray* demons) {
+    switch (aoeType) {
+        case 0:
+            if (demons->count() > 0) {
+                CCPoint target = ((Demon*)demons->randomObject())->getPosition();
+                target.x+=0;
+                target.y+=220;
+                spellEffect->setTarget(target);
+            }
+            break;
+            
+        default:
+            break;
+    }
 }

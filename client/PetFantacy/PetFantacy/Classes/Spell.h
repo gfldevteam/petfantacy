@@ -18,7 +18,10 @@ class Spell : public CCObject{
     
 public:
     Spell(Pet*);
-    ~Spell(){};
+    ~Spell(){
+        sprite->removeFromParentAndCleanup(false);
+        sprite->release();
+    };
     
     int getTicks() {
         return shots;
@@ -46,7 +49,8 @@ private:
     Pet* caster;
     
     /*目标*/
-    Demon* targets;//todo:这应该是一个数组，由aoe type决定
+    Demon* target;
+    CCArray* targets;//todo:这应该是一个数组，由aoe type决定
     
     /*施法时间*/
     float duration;
@@ -76,6 +80,8 @@ private:
     void stopCasting() {
         casting = false;
     };
+    
+    void selectTargets(CCArray* demons);
 };
 
 #endif /* defined(__PetFantacy__Spell__) */

@@ -229,6 +229,7 @@
 		3B653AAE1753BD9A007D01EA /* HttpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B653AAD1753BD9A007D01EA /* HttpClient.cpp */; };
 		3B653AB71753BD9A007D01EA /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B653AB61753BD9A007D01EA /* AppDelegate.cpp */; };
 		3B653ABA1753BD9A007D01EA /* PetFantacy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B653AB91753BD9A007D01EA /* PetFantacy.cpp */; };
+		3BCD2ECD176A1ED000FDA2E5 /* SpellEffect3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD2ECB176A1ED000FDA2E5 /* SpellEffect3.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -699,6 +700,8 @@
 		3B653AB61753BD9A007D01EA /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
 		3B653AB81753BD9A007D01EA /* PetFantacy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PetFantacy.h; path = Classes/PetFantacy.h; sourceTree = "<group>"; };
 		3B653AB91753BD9A007D01EA /* PetFantacy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PetFantacy.cpp; path = Classes/PetFantacy.cpp; sourceTree = "<group>"; };
+		3BCD2ECB176A1ED000FDA2E5 /* SpellEffect3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpellEffect3.cpp; path = PetFantacy/Classes/SpellEffect3.cpp; sourceTree = SOURCE_ROOT; };
+		3BCD2ECC176A1ED000FDA2E5 /* SpellEffect3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellEffect3.h; path = PetFantacy/Classes/SpellEffect3.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1664,6 +1667,8 @@
 		3BFD9692175CF7A400256AE8 /* SpellEffects */ = {
 			isa = PBXGroup;
 			children = (
+				3BCD2ECB176A1ED000FDA2E5 /* SpellEffect3.cpp */,
+				3BCD2ECC176A1ED000FDA2E5 /* SpellEffect3.h */,
 			);
 			name = SpellEffects;
 			path = Classes/SpellEffects;
@@ -1942,6 +1947,7 @@
 				3B0D61191757AB200091FB29 /* Enemy.cpp in Sources */,
 				3B0D61421757ADA00091FB29 /* Spell.cpp in Sources */,
 				3B0D61451757B16B0091FB29 /* SpellEffect.cpp in Sources */,
+				3BCD2ECD176A1ED000FDA2E5 /* SpellEffect3.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

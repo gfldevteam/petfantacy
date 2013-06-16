@@ -35,7 +35,7 @@ CCArray* Utils::getPetTypes() {
     return CCArray::createWithContentsOfFileThreadSafe("pet_types.plist");
 }
 
-CCAction* Utils::createAnimation(const char *animName, int times) {
+CCFiniteTimeAction* Utils::createAnimation(const char *animName, int times) {
     //CCSpriteFrameCache* cache = CCSpriteFrameCache::addSpriteFramesWithFile()
     CCSpriteFrameCache* cache = CCSpriteFrameCache::sharedSpriteFrameCache();
     const char* fileName = CCString::createWithFormat("%s_0.png", animName)->getCString();
