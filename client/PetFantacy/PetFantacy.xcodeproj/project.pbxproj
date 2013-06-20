@@ -33,7 +33,6 @@
 		3B0D613E1757AC3C0091FB29 /* pet3_l1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B0D612D1757AC3C0091FB29 /* pet3_l1.plist */; };
 		3B0D613F1757AC3C0091FB29 /* pet3_l1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0D612E1757AC3C0091FB29 /* pet3_l1.png */; };
 		3B0D61421757ADA00091FB29 /* Spell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D61401757ADA00091FB29 /* Spell.cpp */; };
-		3B0D61451757B16B0091FB29 /* SpellEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D61431757B16A0091FB29 /* SpellEffect.cpp */; };
 		3B6538191753BD96007D01EA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6538181753BD96007D01EA /* QuartzCore.framework */; };
 		3B65381B1753BD96007D01EA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B65381A1753BD96007D01EA /* OpenGLES.framework */; };
 		3B65381D1753BD96007D01EA /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B65381C1753BD96007D01EA /* OpenAL.framework */; };
@@ -229,6 +228,9 @@
 		3B653AAE1753BD9A007D01EA /* HttpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B653AAD1753BD9A007D01EA /* HttpClient.cpp */; };
 		3B653AB71753BD9A007D01EA /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B653AB61753BD9A007D01EA /* AppDelegate.cpp */; };
 		3B653ABA1753BD9A007D01EA /* PetFantacy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B653AB91753BD9A007D01EA /* PetFantacy.cpp */; };
+		3BA245A5176F3FB700531B33 /* SpellEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3BA245A3176F3FB700531B33 /* SpellEffect.cpp */; };
+		3BA245AB176F409700531B33 /* SpellEffectFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3BA245A9176F409700531B33 /* SpellEffectFactory.cpp */; };
+		3BA245AE176F41AC00531B33 /* Configure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3BA245AC176F41AC00531B33 /* Configure.cpp */; };
 		3BCD2ECD176A1ED000FDA2E5 /* SpellEffect3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD2ECB176A1ED000FDA2E5 /* SpellEffect3.cpp */; };
 /* End PBXBuildFile section */
 
@@ -269,8 +271,6 @@
 		3B0D612E1757AC3C0091FB29 /* pet3_l1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pet3_l1.png; path = Resources/pet3_l1.png; sourceTree = "<group>"; };
 		3B0D61401757ADA00091FB29 /* Spell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Spell.cpp; path = Classes/Spell.cpp; sourceTree = "<group>"; };
 		3B0D61411757ADA00091FB29 /* Spell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Spell.h; path = Classes/Spell.h; sourceTree = "<group>"; };
-		3B0D61431757B16A0091FB29 /* SpellEffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpellEffect.cpp; path = Classes/SpellEffect.cpp; sourceTree = "<group>"; };
-		3B0D61441757B16A0091FB29 /* SpellEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellEffect.h; path = Classes/SpellEffect.h; sourceTree = "<group>"; };
 		3B6538151753BD96007D01EA /* PetFantacy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetFantacy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B6538181753BD96007D01EA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3B65381A1753BD96007D01EA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -700,6 +700,12 @@
 		3B653AB61753BD9A007D01EA /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
 		3B653AB81753BD9A007D01EA /* PetFantacy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PetFantacy.h; path = Classes/PetFantacy.h; sourceTree = "<group>"; };
 		3B653AB91753BD9A007D01EA /* PetFantacy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PetFantacy.cpp; path = Classes/PetFantacy.cpp; sourceTree = "<group>"; };
+		3BA245A3176F3FB700531B33 /* SpellEffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpellEffect.cpp; path = PetFantacy/Classes/SpellEffect.cpp; sourceTree = SOURCE_ROOT; };
+		3BA245A4176F3FB700531B33 /* SpellEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellEffect.h; path = PetFantacy/Classes/SpellEffect.h; sourceTree = SOURCE_ROOT; };
+		3BA245A9176F409700531B33 /* SpellEffectFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpellEffectFactory.cpp; sourceTree = SOURCE_ROOT; };
+		3BA245AA176F409700531B33 /* SpellEffectFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpellEffectFactory.h; sourceTree = SOURCE_ROOT; };
+		3BA245AC176F41AC00531B33 /* Configure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Configure.cpp; path = Classes/Configure.cpp; sourceTree = "<group>"; };
+		3BA245AD176F41AC00531B33 /* Configure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Configure.h; path = Classes/Configure.h; sourceTree = "<group>"; };
 		3BCD2ECB176A1ED000FDA2E5 /* SpellEffect3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpellEffect3.cpp; path = PetFantacy/Classes/SpellEffect3.cpp; sourceTree = SOURCE_ROOT; };
 		3BCD2ECC176A1ED000FDA2E5 /* SpellEffect3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellEffect3.h; path = PetFantacy/Classes/SpellEffect3.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -1658,8 +1664,8 @@
 				3B0D61181757AB1F0091FB29 /* Enemy.h */,
 				3B0D61401757ADA00091FB29 /* Spell.cpp */,
 				3B0D61411757ADA00091FB29 /* Spell.h */,
-				3B0D61431757B16A0091FB29 /* SpellEffect.cpp */,
-				3B0D61441757B16A0091FB29 /* SpellEffect.h */,
+				3BA245AC176F41AC00531B33 /* Configure.cpp */,
+				3BA245AD176F41AC00531B33 /* Configure.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1667,8 +1673,12 @@
 		3BFD9692175CF7A400256AE8 /* SpellEffects */ = {
 			isa = PBXGroup;
 			children = (
+				3BA245A3176F3FB700531B33 /* SpellEffect.cpp */,
+				3BA245A4176F3FB700531B33 /* SpellEffect.h */,
 				3BCD2ECB176A1ED000FDA2E5 /* SpellEffect3.cpp */,
 				3BCD2ECC176A1ED000FDA2E5 /* SpellEffect3.h */,
+				3BA245A9176F409700531B33 /* SpellEffectFactory.cpp */,
+				3BA245AA176F409700531B33 /* SpellEffectFactory.h */,
 			);
 			name = SpellEffects;
 			path = Classes/SpellEffects;
@@ -1946,8 +1956,10 @@
 				3B0D61161757AAFC0091FB29 /* Utils.cpp in Sources */,
 				3B0D61191757AB200091FB29 /* Enemy.cpp in Sources */,
 				3B0D61421757ADA00091FB29 /* Spell.cpp in Sources */,
-				3B0D61451757B16B0091FB29 /* SpellEffect.cpp in Sources */,
 				3BCD2ECD176A1ED000FDA2E5 /* SpellEffect3.cpp in Sources */,
+				3BA245A5176F3FB700531B33 /* SpellEffect.cpp in Sources */,
+				3BA245AB176F409700531B33 /* SpellEffectFactory.cpp in Sources */,
+				3BA245AE176F41AC00531B33 /* Configure.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

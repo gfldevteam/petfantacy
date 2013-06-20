@@ -43,9 +43,23 @@ Enemy::~Enemy() {
 }
 
 CCArray* Enemy::check() {
+    int i = 0, c = demonsInAction? demonsInAction->count() : 0;
+    
+    for (; i < c; i++) {
+        Demon* d = (Demon*)demonsInAction->objectAtIndex(i);
+        
+        if (!d->isAlive()) {
+            demonsInAction->removeObject(d);
+            removeChild(d, true);
+            i--;
+            c--;
+        }
+    }
+    
     if (demonsInAction->count() == 0) {
         sendNextWave();
     }
+    
     return demonsInAction;
 }
 
@@ -59,6 +73,7 @@ void Enemy::sendNextWave() {
     
     for (i = 0; i < cap; i++) {
         Demon* demon = new Demon(CCString::createWithFormat("demon%d", 0));
+        demon->retain();
         
         int c = i % 7;
         int r = 3 - i / 7;

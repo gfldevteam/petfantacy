@@ -27,27 +27,29 @@ class SpellEffect : public CCObject{
     
     
 public:
-    /**
-     * @brief: 创建SpellEffect对象
-     * @param int pet type
-     * @param int pet level
-     * @param CCPoint origin, position of caster
-     */
-    SpellEffect(int type, int level, float duration, CCSprite*, CCPoint origin = ccp(0, 0));
     
-    static SpellEffect* create(int type, int level, float duration, CCSprite* sprite, CCPoint origin = ccp(0, 0));
-
-    void play();
-
-    void playHit();
+    SpellEffect();
     
-    void setOrigin(CCPoint o) {
-        origin = o;
-    }
+    ~SpellEffect();
     
-    void setTarget(CCPoint t) {
-        target = t;
-    }
+    void start();
+    
+    void setCaster(Pet* p);
+    
+    void setTarget(Demon* t);
+    
+    void setTargets(CCArray* arr);
+    
+    void setType(int type);
+    
+    void setLevel(int level);
+    
+    void setDuration(float d);
+    
+    CCSprite* getSprite() const;
+    
+    bool isCasting() const;
+    
     
 private:
     
@@ -57,11 +59,13 @@ private:
     
     CCPoint origin;
     
+    Pet* caster;
+    
     /*攻击目标*/
-    CCPoint target;
+    Demon* target;
     
     /*aoe攻击目标*/
-    CCArray targets;
+    CCArray* targets;
     
     CCAction* effect;
     
@@ -71,8 +75,21 @@ private:
     
     float duration;
     
+    int damage;
+    
+    bool casting;
+    
+    void stopCasting();
+
+protected:
+    
+    void setOrigin(CCPoint o);
+    
+    virtual void play();
+    
+    virtual void playHit();
+    
 };
 
-#define CREATE_SE(type, duration, sprite) new SpellEffect#type();
 
 #endif /* defined(__PetFantacy__SpellEffect__) */

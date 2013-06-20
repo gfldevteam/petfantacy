@@ -7,6 +7,7 @@
 //
 
 #include "Spell.h"
+#include "SpellEffectFactory.h"
 
 USING_NS_CC;
 
@@ -14,14 +15,21 @@ USING_NS_CC;
  根据pet计算damage, 创建法术效果（SpellEffect)
  */
 Spell::Spell(Pet* pet) {
+    //这些属性都需要从配置中读取
     shots = 2;
-    sprite = CCSprite::create();
-    sprite->setAnchorPoint(ccp(0, 0));
-    sprite->retain();
-    casting = false;
     duration = 0.5;
-    spellEffect = SpellEffect::create(3, 1, duration, sprite);
     aoeType = 0;
+    damage = 1;
+    
+    spellEffect = SpellEffectFactory::createSpellEffect(3, 1, caster);
+}
+
+CCSprite* Spell::getSprite() const {
+    return spellEffect->getSprite();
+}
+
+bool Spell::stopped() const {
+    return shots == 0 && !spellEffect->isCasting();
 }
 
 /*
@@ -29,37 +37,52 @@ Spell::Spell(Pet* pet) {
  ticks减一
  */
 void Spell::attack(CCArray* demons) {
-    if (shots >= 0 && !casting) {
-        selectTargets(demons);
+    if (shots <= 0) return;
+    
+    if (spellEffect) {
+        //如果施法已经停止，则重新选择目标并播放法术效果，否则跳过
+        if (!spellEffect->isCasting()) {
+            selectTargets(demons);
         
-        spellEffect->play();
-        /*
-         CCSequence::create的参数中最后一个传NULL，否则会出现莫名错误
-         **/
-        sprite->runAction(CCSequence::create(CCDelayTime::create(duration),
-                                             CCCallFunc::create(spellEffect, callfunc_selector(SpellEffect::playHit)),
-                                             CCDelayTime::create(0.2),
-                                             CCCallFunc::create(this, callfunc_selector(Spell::stopCasting)), NULL));
-        casting = true;
-        //todo: 计算伤害，并减少目标血量
+            spellEffect->start();
+            
+            int c = (targets != NULL)? targets->count() : 0;
+            for (int i=0; i < c; i++) {
+                Demon* d = (Demon*)targets->objectAtIndex(i);
+                d->hit(damage);
+            }
+            
+            shots--;
+        } else {
+            return;
+        }
     } else {
+        spellEffect = SpellEffectFactory::createSpellEffect(3, 1, caster);
         return;
     }
-    shots--;
 }
 
 void Spell::selectTargets(CCArray* demons) {
     switch (aoeType) {
         case 0:
             if (demons->count() > 0) {
-                CCPoint target = ((Demon*)demons->randomObject())->getPosition();
-                target.x+=0;
-                target.y+=220;
-                spellEffect->setTarget(target);
+                
+                target = (Demon*)demons->randomObject();
+                
+                targets = CCArray::create();
+                targets->addObject(target);
+                targets->retain();
+                
+            } else {
+                target = NULL;
+                targets = NULL;
             }
             break;
             
         default:
             break;
     }
+    
+    spellEffect->setTarget(target);
+    spellEffect->setTargets(targets);
 }

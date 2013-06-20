@@ -10,6 +10,8 @@
 #define __PetFantacy__Spell__
 
 #include <iostream>
+#include <exception>
+
 #include "Pet.h"
 #include "Demon.h"
 #include "SpellEffect.h"
@@ -18,14 +20,11 @@ class Spell : public CCObject{
     
 public:
     Spell(Pet*);
-    ~Spell(){
-        sprite->removeFromParentAndCleanup(false);
-        sprite->release();
+    virtual ~Spell(){
+        spellEffect->release();
     };
     
-    int getTicks() {
-        return shots;
-    };
+    bool stopped() const;
     
     /**
      @brief 攻击目标，1. 如果目标随机，并且每次攻击的目标不同（aoeType＝0），则从demons参数
@@ -39,9 +38,7 @@ public:
     
     void distroy();
     
-    CCSprite* getSprite() {
-        return sprite;
-    };
+    CCSprite* getSprite() const;
     
 private:
     

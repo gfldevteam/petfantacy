@@ -36,6 +36,8 @@ CCArray* Utils::getPetTypes() {
 }
 
 CCFiniteTimeAction* Utils::createAnimation(const char *animName, int times) {
+    CCLog("create animation: %s", animName);
+    
     //CCSpriteFrameCache* cache = CCSpriteFrameCache::addSpriteFramesWithFile()
     CCSpriteFrameCache* cache = CCSpriteFrameCache::sharedSpriteFrameCache();
     const char* fileName = CCString::createWithFormat("%s_0.png", animName)->getCString();

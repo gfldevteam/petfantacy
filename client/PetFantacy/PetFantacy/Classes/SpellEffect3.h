@@ -18,7 +18,7 @@ class SpellEffect3: public SpellEffect {
     
 public:
     
-    SpellEffect3(int level, float duration, CCSprite* sprite);
+    SpellEffect3();
     
 private:
     

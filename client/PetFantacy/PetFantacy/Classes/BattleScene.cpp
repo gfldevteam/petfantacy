@@ -67,13 +67,15 @@ void BattleScene::tick() {
     for (; i < c; i++) {
         Spell* spell = (Spell*)spells->objectAtIndex(i);
 
-        if (spell->getTicks() > 0) {
-            spell->attack(demons);
-        } else {
-            spell->release();
+        if (spell->stopped()) {
+            removeChild(spell->getSprite(), true);
             spells->removeObjectAtIndex(i);
             i--;
             c--;
+        } else {
+            spell->attack(demons);
         }
     }
+    
+    enemy->check();
 }

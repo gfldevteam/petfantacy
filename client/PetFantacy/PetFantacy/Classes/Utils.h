@@ -31,6 +31,7 @@ public:
     static bool isZipFileExist(const char*, const char*);
     
     static CCFiniteTimeAction* createAnimation(const char*, int times = 0);
+    
 };
 
 #endif /* defined(__SoulStone__Utils__) */

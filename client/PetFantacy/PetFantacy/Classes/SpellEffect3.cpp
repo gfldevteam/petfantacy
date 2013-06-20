@@ -8,8 +8,7 @@
 
 #include "SpellEffect3.h"
 
-SpellEffect3::SpellEffect3(int level, float duration, CCSprite* sprite):SpellEffect(3, level, duration, sprite) {
-
-
-    
+SpellEffect3::SpellEffect3() : SpellEffect() {
+    setOrigin(ccp(300, 500));
+    setDuration(0.5);
 }
